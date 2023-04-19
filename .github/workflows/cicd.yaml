@@ -1,0 +1,24 @@
+name: build and deploy webapp
+run-name: ${{ github.actor }} is learning GitHub Actions
+on: [push]
+  branches: 
+    - master
+  paths:
+    - ./src
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+      steps:
+        - name: Checkou code
+          uses: actions/checkout@v3 
+
+        - name: Setup Node.js
+          uses: actions/setup-node@v3 
+          with: node-version: '14' 
+
+        - name: Install dependencies
+          run: npm install 
+
+        - name: build webapp
+          run: ng build 
