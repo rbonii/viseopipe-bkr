@@ -50,4 +50,4 @@ jobs:
         aws-region: ${{ secrets.AWS_REGION }}
     
     - name: copy web site in s3 bucket
-      run: aws s3 sync ./dist/ s3://viseopipeline-bkr --delete
+      run: aws s3 sync ./dist/viseopipeline-clp s3://viseopipeline-bkr --delete
