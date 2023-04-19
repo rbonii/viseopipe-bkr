@@ -2,8 +2,9 @@ name: build and deploy webapp
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: 
   push:
-    - branches: master
-    - paths: '/src/**'
+    branches: ['master']
+    paths: 
+    - '/src/**'
 jobs:
   build:
     runs-on: ubuntu-latest
