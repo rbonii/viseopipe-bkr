@@ -3,7 +3,7 @@ run-name: ${{ github.actor }} is learning GitHub Actions
 on: 
   workflow_dispatch:
   push:
-    branches: ['master']
+    branches: ['main']
     paths: 
     - '/src/**'
 jobs:
@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkou code
+      - name: Checkout code
         uses: actions/checkout@v2 
 
       - name: Setup Node.js
