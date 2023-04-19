@@ -34,7 +34,7 @@ jobs:
   deployment:
     runs-on: ubuntu-latest
     needs: build
-    environment: develop
+    environment: devolop
 
     steps:
     - uses: actions/download-artifact@v3
